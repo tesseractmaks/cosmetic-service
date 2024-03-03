@@ -1,0 +1,33 @@
+<script>
+var form = document.getElementById('dle-comments-form');
+
+ DLEalert('Ваша пользовательская сессия истекла, перезагрузите страницу в браузере и при необходимости войдите на сайт повторно.<br /><br />Текст Вашего комментария слишком короткий и по мнению администрации сайта не несёт полезной информации.<br /><br />Не задан идентификатор статьи.<br /><br />Проверка, что вы не робот, не была пройдена<br /><br />Поле "Комментарий" является обязательным и не может быть пустым.<br /><br />Добавление комментариев для данной статьи запрещено.', 'Добавление комментария');
+ var timeval = new Date().getTime();
+
+
+		
+	if ( dle_captcha_type == "1" ) {
+		if ( typeof grecaptcha != "undefined"  ) {
+		   grecaptcha.reset();
+		}
+    } else if (dle_captcha_type == "2") {
+		if ( typeof grecaptcha != "undefined"  ) {
+			var recaptcha_public_key = $('#g-recaptcha-response').data('key');
+			grecaptcha.execute(recaptcha_public_key, {action: 'comments'}).then(function(token) {
+			$('#g-recaptcha-response').val(token);
+			});
+		}
+	}
+
+	if ( form.question_answer ) {
+
+	   form.question_answer.value ='';
+       jQuery('#dle-question').text('');
+    }
+
+	if ( document.getElementById('dle-captcha') ) {
+		form.sec_code.value = '';
+		document.getElementById('dle-captcha').innerHTML = '<img src="' + dle_root + 'engine/modules/antibot/antibot.php@rand=' + timeval + '" width="160" height="80" alt="">';
+	}
+		
+ </script>

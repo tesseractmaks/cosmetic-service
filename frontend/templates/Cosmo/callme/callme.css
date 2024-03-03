@@ -1,0 +1,707 @@
+@charset "utf-8";
+
+/* КНОПКА
+-----------------------------------------------------*/
+
+a.RuBizCSS3Modal_button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+
+/* ОСНОВА ОКНА
+-----------------------------------------------------*/
+
+.RuBizCSS3Modal {
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    overflow: scroll;
+    pointer-events: none;
+    -webkit-justify-content: center;
+            justify-content: center;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-align: center;
+     -webkit-box-pack: center;
+       -ms-flex-align: center;
+        -ms-flex-pack: center;
+    -webkit-transition: opacity 0.3s ease-in;
+       -moz-transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in;
+    z-index: 999999;
+}
+
+
+.RuBizCSS3Modal select {
+    border: 1px solid #dfdfdf;
+    height: 50px; background:none;
+    padding: 14px 12px;
+    font-size: 13px;
+    line-height: 25px;
+    color: #fff;
+    max-width: 100%;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+    .RuBizCSS3Modal:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+/* КОНТЕНТ
+-----------------------------------------------------*/
+
+.RuBizCSS3Modal_content { 
+    background: #F8F8F8;
+    max-width: 390px;
+	min-width: 300px;
+    margin: 10% auto;
+    padding: 10px ; padding-top:20px; padding-bottom:40px;
+    position: relative;
+	border-radius:0px; text-align:center;
+	-webkit-box-shadow: 0 0 25px rgba(0,0,0,0.3);
+       -moz-box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+			box-shadow: 9px 13px 26px -8px #222533;
+    z-index: 999998;
+	
+}
+
+
+.RuBizCSS3Modal_content2 { 
+    background:#304357;
+    max-width: 990px;
+	min-width: 300px;
+    margin: 10% auto; 
+    padding: 20px ; padding-bottom:200px;
+    position: relative;
+	border-radius:5px; text-align:center;
+	-webkit-box-shadow: 0 0 25px rgba(0,0,0,0.3);
+       -moz-box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    z-index: 999998;
+	
+}
+
+.RuBizCSS3Modal_content3 { 
+    background:  #F7F7F7;
+    max-width: 490px;
+	min-width: 300px;
+    margin: 10% auto; 
+    padding: 50px ; padding-bottom:50px;
+    position: relative;
+	border-radius:0px; text-align:center;
+	-webkit-box-shadow: 0 0 25px rgba(0,0,0,0.3);
+       -moz-box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    z-index: 999998;
+	
+}
+
+.RuBizCSS3Modal_content4 { 
+    background: #F8F8F8;
+    max-width: 490px;
+	min-width: 300px;
+    margin: 10% auto; 
+    padding: 40px ; padding-bottom:50px;
+    position: relative;
+	border-radius:5px; text-align:center;
+	-webkit-box-shadow: 0 0 25px rgba(0,0,0,0.3);
+       -moz-box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    z-index: 999998;
+	
+}
+
+
+    /* заголовок */
+    .RuBizCSS3Modal_content .rb_zagolovok {
+    	background: rgba(0,0,0,0.1);
+    	color: #333;
+        margin: 0 -20px 10px -20px;
+    	padding: 0.5em 2em 0.5em 1em;
+    	text-align: center;
+    	font-size: 1.5em;
+    	font-weight: 400;
+    	border-radius: 3px 3px 0 0;
+    }
+    /* простой текст в окне */
+    .RuBizCSS3Modal_content .rb_text {
+    	font-size: 16px;
+    	color: #333;
+    	margin: 0;
+    	padding: 5px 0;
+    	line-height: 22px;
+    }
+    /* картинка */
+    .RuBizCSS3Modal_content img {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+
+/* ЗАКРЫТЬ ОКНО
+-----------------------------------------------------*/
+
+/* закрываем окно кликая вне окна */
+.o_close_RuBizCSS3Modal {
+    visibility: visible;
+    position: fixed; 
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999997;
+}
+/* закрываем окно кликая на крестик */
+.b_close_RuBizCSS3Modal { width:40px; height:40px; border-radius:50px;
+    background:#FF5604;
+    color: #fff;
+    padding: 0.4em 0.4em;
+    font-size: 18px;
+    font-weight: bold; font-family:Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: -20px;
+    right:-20px;
+    text-align: center;
+    text-decoration: none;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+    .b_close_RuBizCSS3Modal:hover {
+        background: #FF0000; color:#FFFFFF;
+    }
+/* закрываем окно кликая вне окна */
+.o_close_RuBizCSS3Modal2 {
+    visibility: visible;
+    position: fixed; 
+	width: 100%;
+	height: 100%;
+	top: 300px;
+	left: 0;
+	z-index: 999997;
+}
+/* закрываем окно кликая на крестик */
+.b_close_RuBizCSS3Modal2 { width:70px; height:70px; border-radius:70px;
+    background:#304357 ;
+    color: #fff;
+    padding: 0.5em 0.4em;
+    font-size: 3em;
+    font-weight: bold; 
+    position: absolute;
+     top: 220px;
+    right: -120px;
+    text-align: center;
+    text-decoration: none;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	        transition: all 0.3s;box-shadow: 9px 13px 26px -8px #222533;
+			
+}
+    .b_close_RuBizCSS3Modal2:hover {
+        background: #FF4F4F; color:#FFFFFF;
+    }
+
+.b_close_RuBizCSS3Modal3 { width:70px; height:70px; border-radius:70px;
+    background: #F7F7F7;
+    color: #FF5B5B;
+    padding: 0.5em 0.4em;
+    font-size: 2em;
+    font-weight: bold; 
+    position: absolute;
+     top: 200px;
+    right: -80px;
+    text-align: center;
+    text-decoration: none;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	        transition: all 0.3s;box-shadow: 9px 13px 26px -8px #222533;
+			
+}
+    .b_close_RuBizCSS3Modal3:hover {
+        background: #FF4F4F; color:#FFFFFF;
+    }
+
+/* НАСТРОЙКИ ДЛЯ ВИДЕОПЛЕЕРА
+-----------------------------------------------------*/
+
+.RuBizCSS3Modal_VideoArea {
+	position: relative;
+	padding-bottom: 54.4%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+    margin: 10px 0 15px 0;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.8);
+       -moz-box-shadow: 0 0 4px rgba(0,0,0,0.8);
+            box-shadow: 0 0 4px rgba(0,0,0,0.8);
+}
+    .RuBizCSS3Modal_VideoArea iframe {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+        border: none;
+    }
+
+
+/* НАСТРОЙКИ ДЛЯ ФОРМЫ ПОДПИСКИ
+-----------------------------------------------------*/
+
+.RuBizCSS3Modal_optin {
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+}
+    .RuBizCSS3Modal-input * { margin: 0; padding: 0; }
+    .RuBizCSS3Modal_optin input::-webkit-input-placeholder { color:#fff; }
+	.RuBizCSS3Modal_optin input:focus::-webkit-input-placeholder { color:#fff; }
+	.RuBizCSS3Modal_optin input::-moz-placeholder { color:#fff; }
+	.RuBizCSS3Modal_optin input:focus::-moz-placeholder { color:#fff; }
+	.RuBizCSS3Modal_optin input:-ms-input-placeholder { color:#fff; }
+	.RuBizCSS3Modal_optin input:focus:-ms-input-placeholder { color:#fff; }
+    .RuBizCSS3Modal_optin input[type="text"] {
+        width: 70%;
+        color: #fff;
+        font-size: 1.5em;
+        padding: 7px 10px 7px 10px;
+        margin: 10px;
+        border: 1px solid #999;
+        outline: none;
+        text-align: center;
+        -webkit-appearance: none;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        -webkit-border-radius: 0;
+           -moz-border-radius: 0;
+                border-radius: 0;
+        -webkit-transition: all ease .5s;
+           -moz-transition: all ease .5s;
+            -ms-transition: all ease .5s;
+             -o-transition: all ease .5s;
+                transition: all ease .5s;
+    }
+        .optin input[type="text"]:hover {
+            -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5);
+               -moz-box-shadow: 0 0 15px rgba(0,0,0,0.5);
+                    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+    /* кнопка */
+    .RuBizCSS3Modal_optin input[type="submit"] {
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#ffd000),color-stop(1,#edba00));
+        background: -moz-linear-gradient(center top,#ffd000 5%,#edba00 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd000',endColorstr='#edba00');
+        background-color: #ffd000;
+        border: 1px solid rgba(0,0,0,0.1);
+        display: inline-block;
+        color: #fff;
+        font-family: arial;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 13px 25px;
+        margin: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        outline: none;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0px 1px 0px 0px rgba(250,250,250,0.6) inset,0px -1px 0px 1px rgba(0,0,0,0.1) inset;
+                box-shadow: 0px 1px 0px 0px rgba(250,250,250,0.6) inset,0px -1px 0px 1px rgba(0,0,0,0.1) inset;
+    }
+        .RuBizCSS3Modal_optin input[type="submit"]:hover {
+            background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#edba00),color-stop(1,#ffd000));
+            background:-moz-linear-gradient(center top,#edba00 5%,#ffd000 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#edba00',endColorstr='#ffd000');
+            background-color:#edba00
+        }
+        .RuBizCSS3Modal_optin input[type="submit"]:active {
+            position:relative;
+            top:1px
+        }
+        @media only screen and (max-width: 767px) {
+            
+            .RuBizCSS3Modal_optin input[type="text"] {
+                font-size: 1em;
+            }
+            .RuBizCSS3Modal_optin input[type="submit"] {
+                font-size: 1.2em;
+                padding: 10px 15px;
+            }
+           
+        }
+    /* текст под кнопкой */
+    .rbmodal_nospam {
+        color: #ccc;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+ @media only screen and (max-width: 480px) {
+.b_close_RuBizCSS3Modal { width:40px; height:40px; border-radius:50px;
+    background:#FF5604;
+    color: #fff;
+    padding: 0.4em 0.4em;
+    font-size: 24px;
+    font-weight: bold; font-family:Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: -20px;
+    right:-20px;
+    text-align: center;
+    text-decoration: none;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+}
+/* ЭФФЕКТЫ ДЛЯ ПОЯВЛЕНИЯ ОКНА
+-----------------------------------------------------*/
+
+/*============================================
+    ЭФФЕКТ 1
+    - плавное появление из центра
+============================================*/
+
+.RuBizCSS3Modal:target .effect1 {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
+}
+.effect1 {
+	opacity: 0;
+	-webkit-transform: scale(0.6);
+	   -moz-transform: scale(0.6);
+	    -ms-transform: scale(0.6);
+	        transform: scale(0.6);
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+
+/*============================================
+    ЭФФЕКТ 2
+    - плавное вертикальное перевертывание
+============================================*/
+
+.RuBizCSS3Modal  {
+	-webkit-perspective: 1300px;
+	   -moz-perspective: 1300px;
+	        perspective: 1300px;
+}
+.RuBizCSS3Modal:target .effect2 {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	   -moz-transform: rotateX(0deg);
+	    -ms-transform: rotateX(0deg);
+	        transform: rotateX(0deg);
+}
+.effect2 {
+	opacity: 0;
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transform: rotateX(-70deg);
+	   -moz-transform: rotateX(-70deg);
+	    -ms-transform: rotateX(-70deg);
+	        transform: rotateX(-70deg);
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+
+/*============================================
+    ЭФФЕКТ 3
+    - супер-масштабирование
+============================================*/
+
+.RuBizCSS3Modal:target .effect3 {
+	opacity: 1;
+    -webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
+}
+.effect3 {
+	opacity: 0;
+    -webkit-transform: scale(2);
+
+	   -moz-transform: scale(2);
+	    -ms-transform: scale(2);
+	        transform: scale(2);
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+#back-top {
+    position: fixed;
+    right:100px; bottom:20px;
+    display: none;
+    background: none;
+    color: #fff;
+    padding: 10px;
+    width: 100px;z-index:9999;
+	
+	
+}
+
+#back-top img {
+ width: 82px;
+opacity:0.7;
+
+	
+}
+
+
+#back-top img:hover {
+
+opacity:1;
+	
+}
+
+/*кнопка звонка*/
+
+.callback-bt {
+        background:#ffb922;
+        border:2px solid #ffb922;
+        border-radius:50%;
+        box-shadow:0 8px 10px rgba(56,163,253,0.3);
+        cursor:pointer;
+        height:68px;
+        text-align:center;
+        width:68px;
+        position: fixed;
+        right: -80px;
+        bottom: 100px;
+        z-index:999;
+        transition:.3s;
+        -webkit-animation:hoverWave linear 1s infinite;
+        animation:hoverWave linear 1s infinite;
+}
+
+.callback-bt .text-call{
+        height:68px;
+        width:68px;        
+        border-radius:50%;
+        position:relative;
+        overflow:hidden;
+}
+
+
+
+.callback-bt .text-call:hover span {
+    opacity: 1;
+       
+}
+
+
+.callback-bt:hover {
+        background: #ED6D05;
+        border:2px solid #ED6D05;
+        border-radius:50%;
+        box-shadow:0 8px 10px rgba(56,163,253,0.3);
+        cursor:pointer;
+        height:68px;
+        text-align:center;
+        width:68px;
+        position: fixed;
+        right: -80px;
+        bottom: 100px;
+        z-index:999;
+        transition:.3s;
+        -webkit-animation:hoverWave linear 1s infinite;
+        animation:hoverWave linear 1s infinite;
+}
+.callback-bt:hover i {
+        color:#fff;
+        font-size:40px;
+        transition:.3s;
+}
+.callback-bt i {
+        color:#fff;
+        font-size:34px;
+        transition:.3s;
+        line-height: 66px;transition: .5s ease-in-out;
+}
+
+.callback-bt i  {
+    animation: 1200ms ease 0s normal none 1 running shake;
+        animation-iteration-count: infinite;
+        -webkit-animation: 1200ms ease 0s normal none 1 running shake;
+        -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes hoverWave {
+        0% {
+        box-shadow:0 8px 10px rgba(56,163,253,0.3),0 0 0 0 rgba(255, 185, 34, 0.2),0 0 0 0 rgba(255, 185, 34, 0.2)
+}
+40% {
+        box-shadow:0 8px 10px rgba(56,163,253,0.3),0 0 0 15px rgba(255, 185, 34, 0.2),0 0 0 0 rgba(255, 185, 34, 0.2)
+}
+80% {
+        box-shadow:0 8px 10px rgba(56,163,253,0.3),0 0 0 30px rgba(255, 185, 34, 0),0 0 0 26.7px rgba(255, 185, 34, 0.67)
+}
+100% {
+        box-shadow:0 8px 10px rgba(56,163,253,0.3),0 0 0 30px rgba(255, 185, 34, 0),0 0 0 40px rgba(255, 185, 34, 0.0)
+}
+}@keyframes hoverWave {
+        0% {
+        box-shadow:0 8px 10px rgba(56,163,253,0.3),0 0 0 0 rgba(255, 185, 34, 0.2),0 0 0 0 rgba(255, 185, 34, 0.2)
+}
+40% {
+        box-shadow:0 8px 10px rgba(56,163,253,0.3),0 0 0 15px rgba(255, 185, 34, 0.2),0 0 0 0 rgba(255, 185, 34, 0.2)
+}
+80% {
+        box-shadow:0 8px 10px rgba(56,163,253,0.3),0 0 0 30px rgba(255, 185, 34, 0),0 0 0 26.7px rgba(255, 185, 34, 0.67)
+}
+100% {
+        box-shadow:0 8px 10px rgba(56,163,253,0.3),0 0 0 30px rgba(255, 185, 34, 0),0 0 0 40px rgba(255, 185, 34, 0.0)
+}
+}
+
+/* animations icon */
+
+@keyframes shake {
+0% {
+    transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+}
+10% {
+    transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg);
+}
+20% {
+    transform: rotateZ(15deg);
+        -ms-transform: rotateZ(15deg);
+        -webkit-transform: rotateZ(15deg);
+}
+30% {
+    transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+}
+40% {
+    transform: rotateZ(7.5deg);
+        -ms-transform: rotateZ(7.5deg);
+        -webkit-transform: rotateZ(7.5deg);
+}
+50% {
+    transform: rotateZ(-6deg);
+        -ms-transform: rotateZ(-6deg);
+        -webkit-transform: rotateZ(-6deg);
+}
+60% {
+    transform: rotateZ(5deg);
+        -ms-transform: rotateZ(5deg);
+        -webkit-transform: rotateZ(5deg);
+}
+70% {
+    transform: rotateZ(-4.28571deg);
+        -ms-transform: rotateZ(-4.28571deg);
+        -webkit-transform: rotateZ(-4.28571deg);
+}
+80% {
+    transform: rotateZ(3.75deg);
+        -ms-transform: rotateZ(3.75deg);
+        -webkit-transform: rotateZ(3.75deg);
+}
+90% {
+    transform: rotateZ(-3.33333deg);
+        -ms-transform: rotateZ(-3.33333deg);
+        -webkit-transform: rotateZ(-3.33333deg);
+}
+100% {
+    transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+}
+}
+
+@-webkit-keyframes shake {
+0% {
+    transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+}
+10% {
+    transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg);
+}
+20% {
+    transform: rotateZ(15deg);
+        -ms-transform: rotateZ(15deg);
+        -webkit-transform: rotateZ(15deg);
+}
+30% {
+    transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+}
+40% {
+    transform: rotateZ(7.5deg);
+        -ms-transform: rotateZ(7.5deg);
+        -webkit-transform: rotateZ(7.5deg);
+}
+50% {
+    transform: rotateZ(-6deg);
+        -ms-transform: rotateZ(-6deg);
+        -webkit-transform: rotateZ(-6deg);
+}
+60% {
+    transform: rotateZ(5deg);
+        -ms-transform: rotateZ(5deg);
+        -webkit-transform: rotateZ(5deg);
+}
+70% {
+    transform: rotateZ(-4.28571deg);
+        -ms-transform: rotateZ(-4.28571deg);
+        -webkit-transform: rotateZ(-4.28571deg);
+}
+80% {
+    transform: rotateZ(3.75deg);
+        -ms-transform: rotateZ(3.75deg);
+        -webkit-transform: rotateZ(3.75deg);
+}
+90% {
+    transform: rotateZ(-3.33333deg);
+        -ms-transform: rotateZ(-3.33333deg);
+        -webkit-transform: rotateZ(-3.33333deg);
+}
+100% {
+    transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+}
+}
+/* конец кнопки звонка */

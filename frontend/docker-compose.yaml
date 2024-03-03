@@ -1,0 +1,19 @@
+version: "1"
+
+services:
+  nginx_cosmetic_front:
+    build:
+      context: ./
+    container_name: nginx-cosmetic-front
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.cosmetic.rule=Host(`cosmetic.tesseractmaks.tech`)"
+networks:
+  default:
+    name: proxynet
+    external: true
+
+
+
+
